@@ -1,0 +1,43 @@
+.title {
+  color: green;
+  text-align: center;
+}
+
+.flex_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 725px;
+  margin: auto;
+}
+
+#email_icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+#linkedin_icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+#instagram_icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+#github_icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+#grailed_icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
