@@ -1,6 +1,12 @@
-.title {
+#name {
   color: green;
   text-align: center;
+}
+
+#square {
+  width: 200px;
+  height: 200px;
+  background-color: red;
 }
 
 .flex_box {
