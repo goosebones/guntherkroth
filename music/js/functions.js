@@ -52,3 +52,6 @@ Amplitude.init({
     }
   ]
 });
+
+Amplitude.setShuffle(true);
+Amplitude.setRepeat(true);
