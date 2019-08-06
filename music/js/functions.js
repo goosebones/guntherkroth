@@ -54,6 +54,13 @@ var p = "o";
 Amplitude.setShuffle(true);
 var q = "x8";
 
+var enter = document.getElementById("pass");
+enter.addEventListener("keydown", function(e) {
+    if (e.keyCode === 81) {
+        checkPassword();
+    }
+});
+
 function checkPassword() {
     var key = w + z + b + h + p + q + g;
     var pass = document.getElementById("pass").value;
