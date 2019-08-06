@@ -49,4 +49,18 @@ Amplitude.init({
 });
 
 Amplitude.setShuffle(true);
-Amplitude.setRepeat(true);
+
+function checkPassword() {
+    var key = "thadeous";
+    var pass = document.getElementById("pass").value;
+    if (pass === key) {
+        showPlayer();
+    } else {
+        document.getElementById("pass").style.display = "none";
+    }
+}
+
+function showPlayer() {
+    document.getElementById("inputCheck").style.display = "none";
+    document.getElementById("hider").style.display = "none";
+}
