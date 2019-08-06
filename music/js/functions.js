@@ -1,7 +1,8 @@
 window.onkeydown = function(e) {
     return !(e.keyCode == 32);
 };
-
+var z = "n";
+var w = "tu";
 /*
   Handles a click on the down button to slide down the playlist.
 */
@@ -14,7 +15,8 @@ document.getElementsByClassName('down-header')[0].addEventListener('click', func
   document.getElementById('list-screen').classList.add('slide-in-top');
   document.getElementById('list-screen').style.display = "block";
 });
-
+var h = "b";
+var g = "87";
 /*
   Handles a click on the up arrow to hide the list screen.
 */
@@ -23,7 +25,7 @@ document.getElementsByClassName('hide-playlist')[0].addEventListener('click', fu
   document.getElementById('list-screen').classList.add('slide-out-top');
   document.getElementById('list-screen').style.display = "none";
 });
-
+var b = "e";
 /*
   Handles a click on the song played progress bar.
 */
@@ -48,15 +50,17 @@ Amplitude.init({
   ]
 });
 
+var p = "o";
 Amplitude.setShuffle(true);
+var q = "x8";
 
 function checkPassword() {
-    var key = "thadeous";
+    var key = w + z + b + h + p + q + g;
     var pass = document.getElementById("pass").value;
     if (pass === key) {
         showPlayer();
     } else {
-        document.getElementById("pass").style.display = "none";
+        document.getElementById("inputCheck").style.display = "none";
     }
 }
 
