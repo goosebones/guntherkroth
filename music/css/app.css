@@ -11,7 +11,9 @@
 #inputCheck {
     z-index: 150;
     position: fixed;
-    padding: 50%;
+    margin: auto;
+    padding-top: 200px;
+    display: inline-block;
 }
 
 /*
@@ -452,6 +454,7 @@ div#player-bottom {
   3. Layout
 */
 body {
+  text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
