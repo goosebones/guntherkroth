@@ -16,7 +16,7 @@ document.getElementsByClassName('down-header')[0].addEventListener('click', func
   document.getElementById('list-screen').style.display = "block";
 });
 var h = "b";
-var g = "87";
+var g = "87"; 
 /*
   Handles a click on the up arrow to hide the list screen.
 */
