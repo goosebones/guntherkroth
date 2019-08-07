@@ -46,6 +46,90 @@ Amplitude.init({
       "album": "Single",
       "url": "songs/sanguine_paradise.mp3",
       "cover_art_url": "art/sanguine_paradise.png"
+  },
+    {
+      "name": "1.5",
+      "artist": "21 Savage",
+      "album": "I am > I Was",
+      "url": "songs/1.5.mp3",
+      "cover_art_url": "art/1.5.png"
+  },
+    {
+      "name": "100 Shooters",
+      "artist": "Future",
+      "album": "Single",
+      "url": "songs/100_shooters.mp3",
+      "cover_art_url": "art/100_shooters.jpg"
+  },
+    {
+      "name": "Ashley (ft. Dababy)",
+      "artist": "Stunna 4 Vegas",
+      "album": "4x",
+      "url": "songs/ashley.mp3",
+      "cover_art_url": "art/ashley.jpg"
+  },
+    {
+      "name": "Baby Sitter (ft. Offset)",
+      "artist": "Dababy",
+      "album": "Baby On Baby",
+      "url": "songs/baby_sitter.mp3",
+      "cover_art_url": "art/baby_on_baby.jpg"
+  },
+    {
+      "name": "All Of A Sudden",
+      "artist": "Lil Baby",
+      "album": "Too Hard",
+      "url": "songs/all_of_a_sudden.mp3",
+      "cover_art_url": "art/too_hard.jpg"
+  },
+    {
+      "name": "Baby",
+      "artist": "Dababy & Lil Baby",
+      "album": "Single",
+      "url": "songs/baby.mp3",
+      "cover_art_url": "art/baby.jpg"
+  },
+    {
+      "name": "I Don't Like",
+      "artist": "Chief Keef",
+      "album": "Single",
+      "url": "songs/i_dont_like.mp3",
+      "cover_art_url": "art/i_dont_like.jpg"
+  },
+    {
+      "name": "Lookin (ft. Lil Uzi Vert)",
+      "artist": "Playboi Carti",
+      "album": "Playboi Carti",
+      "url": "songs/lookin.mp3",
+      "cover_art_url": "art/lookin.jpg"
+  },
+    {
+      "name": "Pure Cocaine",
+      "artist": "Lil Baby",
+      "album": "Street Gossip",
+      "url": "songs/pure_cocaine.mp3",
+      "cover_art_url": "art/street_gossip.jpg"
+  },
+    {
+      "name": "That's a Rack",
+      "artist": "Lil Uzi Vert",
+      "album": "Single",
+      "url": "songs/thats_a_rack.mp3",
+      "cover_art_url": "art/thats_a_rack.png"
+  },
+    {
+      "name": "The London (ft. J.Cole & Travis Scott)",
+      "artist": "Young Thug",
+      "album": "Single",
+      "url": "songs/the_london.mp3",
+      "cover_art_url": "art/the_london.jpg"
+  },
+    {
+      "name": "Time (ft. Meek Mill)",
+      "artist": "Lil Baby",
+      "album": "Street Gossip",
+      "url": "songs/time.mp3",
+      "cover_art_url": "art/street_gossip.jpg"
     }
   ]
 });
