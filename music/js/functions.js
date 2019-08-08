@@ -38,100 +38,54 @@ document.getElementById('song-played-progress').addEventListener('click', functi
 
 document.querySelector('img[data-amplitude-song-info="cover_art_url"]').style.height = document.querySelector('img[data-amplitude-song-info="cover_art_url"]').offsetWidth + 'px';
 
-Amplitude.init({
-  "songs": [
-    {
-      "name": "Sanguine Paradise",
-      "artist": "Lil Uzi Vert",
-      "album": "Single",
-      "url": "songs/sanguine_paradise.mp3",
-      "cover_art_url": "art/sanguine_paradise.png"
-  },
-    {
-      "name": "1.5",
-      "artist": "21 Savage",
-      "album": "I am > I Was",
-      "url": "songs/1.5.mp3",
-      "cover_art_url": "art/1.5.png"
-  },
-    {
-      "name": "100 Shooters",
-      "artist": "Future",
-      "album": "Single",
-      "url": "songs/100_shooters.mp3",
-      "cover_art_url": "art/100_shooters.jpg"
-  },
-    {
-      "name": "Ashley (ft. Dababy)",
-      "artist": "Stunna 4 Vegas",
-      "album": "4x",
-      "url": "songs/ashley.mp3",
-      "cover_art_url": "art/ashley.jpg"
-  },
-    {
-      "name": "Baby Sitter (ft. Offset)",
-      "artist": "Dababy",
-      "album": "Baby On Baby",
-      "url": "songs/baby_sitter.mp3",
-      "cover_art_url": "art/baby_on_baby.jpg"
-  },
-    {
-      "name": "All Of A Sudden",
-      "artist": "Lil Baby",
-      "album": "Too Hard",
-      "url": "songs/all_of_a_sudden.mp3",
-      "cover_art_url": "art/too_hard.jpg"
-  },
-    {
-      "name": "Baby",
-      "artist": "Dababy & Lil Baby",
-      "album": "Single",
-      "url": "songs/baby.mp3",
-      "cover_art_url": "art/baby.jpg"
-  },
-    {
-      "name": "I Don't Like",
-      "artist": "Chief Keef",
-      "album": "Single",
-      "url": "songs/i_dont_like.mp3",
-      "cover_art_url": "art/i_dont_like.jpg"
-  },
-    {
-      "name": "Lookin (ft. Lil Uzi Vert)",
-      "artist": "Playboi Carti",
-      "album": "Playboi Carti",
-      "url": "songs/lookin.mp3",
-      "cover_art_url": "art/lookin.jpg"
-  },
-    {
-      "name": "Pure Cocaine",
-      "artist": "Lil Baby",
-      "album": "Street Gossip",
-      "url": "songs/pure_cocaine.mp3",
-      "cover_art_url": "art/street_gossip.jpg"
-  },
-    {
-      "name": "That's a Rack",
-      "artist": "Lil Uzi Vert",
-      "album": "Single",
-      "url": "songs/thats_a_rack.mp3",
-      "cover_art_url": "art/thats_a_rack.png"
-  },
-    {
-      "name": "The London (ft. J.Cole & Travis Scott)",
-      "artist": "Young Thug",
-      "album": "Single",
-      "url": "songs/the_london.mp3",
-      "cover_art_url": "art/the_london.jpg"
-  },
-    {
-      "name": "Time (ft. Meek Mill)",
-      "artist": "Lil Baby",
-      "album": "Street Gossip",
-      "url": "songs/time.mp3",
-      "cover_art_url": "art/street_gossip.jpg"
+function Song(name, artist, cover_art_type) {
+    this.name = name;
+    this.artist = artist;
+
+    var lowerCaseName = name.toLowerCase();
+    var urlArray = lowerCaseName.split(" ");
+    var urlString = "";
+    for (var i = 0; i < urlArray.length; i++) {
+        urlString += urlArray[i];
+        if (i < urlArray.length-1) {
+            urlString += "_";
+        };
+    };
+
+    this.url = "songs/" + urlString + ".mp3";
+    if (cover_art_type === "png") {
+        this.cover_art_url = "art/" + urlString + ".png";
+    } else {
+        this.cover_art_url = "art/" + urlString + ".jpg";
+    };
+
+    this.toJSON = function toJSON() {
+        var s = "{";
+        var name = "\"name\"" + ":" + "\"" + this.name + "\"" + ",";
+        var artist = "\"artist\"" + ":" + "\"" + this.artist + "\"" + ",";
+        var url = "\"url\"" + ":" + "\"" + this.url + "\"" + ",";
+        var cover = "\"cover_art_url\"" + ":" + "\"" + this.cover_art_url + "\"" + "}";
+        return s + name + artist + url + cover;
     }
-  ]
+};
+
+var s1 = new Song("Sanguine Paradise", "Lil Uzi Vert", "png");
+var s2 = new Song("1.5", "21 Savage", "png");
+var s3 = new Song("100 Shooters", "Future", "jpg");
+var s4 = new Song("Ashley", "Stunna 4 Vegas (ft. Dababy)", "jpg");
+var s5 = new Song("Baby Sitter", "Dababy (ft. Offset)", "jpg");
+var s6 = new Song("All Of a Sudden", "Lil Baby", "jpg");
+var s7 = new Song("Baby", "Lil Baby & Dababy", "jpg");
+var s8 = new Song("I Dont Like", "Chief Keef", "jpg");
+var s9 = new Song("Lookin", "Playboi Carti (ft. Lil Uzi Vert)", "jpg");
+var s10 = new Song("Pure Cocaine", "Lil Baby", "jpg");
+var s11 = new Song("Thats a Rack", "Lil Uzi Vert", "png");
+var s12 = new Song("The London", "Young Thug (ft. J.Cole & Travis Scott)", "jpg");
+var s13 = new Song("Time", "Lil Baby (ft. Meek Mill)", "jpg");
+
+
+Amplitude.init({
+    "songs": [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13]
 });
 
 var p = "o";
