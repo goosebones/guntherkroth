@@ -58,8 +58,8 @@
 .content li {
     margin: 10px;
 }
-.content li a {
-    color: gre
+.listLink:hover {
+    color:green;
 }
 
 /* grey footer banner */
