@@ -1,11 +1,18 @@
-p {
+p, li {
     font-family: sans-serif;
 }
+
+.heading {
+    text-align: center;
+}
+
 .icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 .icons a {
     text-decoration: none;
@@ -17,6 +24,7 @@ p {
     border-radius: 25px;
     width: 300px;
     height: 300px;
+    margin: 10px;
 }
 .content img {
     margin: 15px auto;
@@ -28,6 +36,19 @@ p {
     text-align: center;
     margin: 5px;
 }
+.content ul {
+    font-size: 16pt;
+    margin: 35px 10px 10px;
+    color: green;
+    font-weight: bold;
+    list-style-type: square;
+}
+.content li {
+    margin: 10px;
+}
+.content li a {
+    color: gre
+}
 
 
 .foot {
@@ -37,6 +58,6 @@ p {
 .foot p {
     text-align: center;
 }
-.foot a:link {
+.foot a {
     color: #2b2b2b;
 }
