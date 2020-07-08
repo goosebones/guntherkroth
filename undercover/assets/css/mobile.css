@@ -1,0 +1,98 @@
+/******************************************************************************/
+/*************** These styles are used to format mobile devices ***************/
+/******************************************************************************/
+
+@media only screen and (max-width: 800px) {
+
+/* grid layout */
+.grid {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 10px auto;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "main";
+    width: 95vw;
+    margin: auto;
+}
+
+/* banner */
+.banner_image {
+    width: 95vw;
+}
+/* navigation */
+nav {
+    display: none;
+    margin: 0;
+    z-index: 10;
+    height: 95vh;
+    position: absolute;
+    width: 50vw;
+    font-size: 1.2rem;
+}
+
+#menu_pop {
+    display: block;
+    grid-area: sidebar;
+    background-color: black;
+    color: white;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* copyright */
+.copy {
+    bottom: 10px;
+}
+
+/* main content section */
+.main {
+    padding: 1rem 0;
+    margin: 10px auto;
+}
+.main p {
+    width: 90vw;
+}
+.main img {
+    width: 90vw;
+}
+.main video {
+    width: 90vw;
+    z-index: -1;
+    position: relative;
+}
+
+.pic_cap {
+    font-size: .8rem;
+}
+
+.grid .sub_heading {
+    margin: 20px auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* back to top button */
+#back_to_top {
+    width: 90vw;
+}
+
+/* hover image */
+.hover_div {
+    display: block;
+}
+
+.hover_img {
+    width: 400px;
+    margin: 5px 0 0 0;
+    display: block;
+}
+
+#p_hover {
+    width: auto;
+}
+
+}

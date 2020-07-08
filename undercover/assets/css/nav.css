@@ -1,0 +1,189 @@
+/******************************************************************************/
+/*These styles are used to format the navigation and basic layout of each page*/
+/******************************************************************************/
+
+/* grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    grid-template-areas:
+    "header header"
+    "sidebar main";
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* banner */
+.banner_image {
+    grid-area: header;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+}
+
+#text_img {
+    width: 100%;
+    height: 200px;
+    margin: auto auto;
+    display: block;
+    vertical-align: middle;
+}
+
+/* nav */
+nav {
+    grid-area: sidebar;
+    background-color: black;
+    padding: 1em 0;
+    margin-left: 50px;
+    height: 60vh;
+    font-family: sans-serif;
+    position: relative;
+}
+nav ul {
+    list-style-type: none;
+    padding-left: .5rem;
+}
+nav li {
+    padding: .25rem;
+}
+nav a {
+    text-decoration: none;
+    color: #dbdbdb;
+}
+nav a:hover {
+    color: white;
+}
+
+#seasons_dropdown {
+    display: none;
+}
+#collabs_dropdown {
+    display: none;
+}
+#seasons, #collabs{
+    color: #dbdbdb;
+    cursor: pointer;
+}
+#seasons:hover , #collabs:hover{
+    color: white;
+}
+
+#menu_pop {
+    display: none; /* only used on moblie */
+}
+
+/* nav hyperlinks */
+/************* This is used for the 'you are here' indicator ******************/
+.orange {
+    color: #ff9900
+}
+.orange:hover {
+    color: #ffcb7f;
+}
+
+/* copyright */
+.copy {
+    grid-area: sidebar;
+    font-size: .75rem;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+.copy a {
+    text-decoration: none;
+    color: #dbdbdb;
+}
+.copy a:hover {
+    color: white;
+}
+.copy p {
+    color: white;
+}
+
+/* main content */
+.main {
+    grid-area: main;
+    margin-right: 50px;
+    padding: 1rem 2rem;
+}
+.main .sub_heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: grey;
+    font-family: "Roboto", sans-serif;
+}
+.main p {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.main img {
+    width: 400px;
+    margin: 5px auto 0 auto;
+    display: block;
+}
+
+.pic_cap {
+    text-align: center;
+    margin-top: 0;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+video {
+    margin: auto;
+    display: block;
+    width: 400px;
+    margin: 5px auto 0 auto;
+}
+
+/* in-text links */
+.in_link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.in_link:hover {
+    color: grey;
+}
+
+/* back to top button */
+#back_to_top {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    height: 50px;
+    cursor: pointer;
+}
+#back_to_top:hover {
+    color: #dbdbdb;
+}
+#back_to_top p {
+    vertical-align: middle;
+    line-height: 50px;
+    font-family: sans-serif;
+}
+
+/* hover effect image */
+#p_hover {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    border: solid black 2px;
+    padding: 5px;
+    cursor: context-menu;
+}
+
+.hover_div {
+    position: relative;
+    display: block;
+}
+
+/* format for works cited */
+.main .hanging_indent {
+    margin-left: .5in;
+    text-indent: -.5in;
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    line-height: 2;
+}
