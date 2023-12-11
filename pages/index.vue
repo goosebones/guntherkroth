@@ -3,22 +3,19 @@
     <v-container>
       <v-row>
         <v-col cols="12" class="d-flex justify-center text-h3">
-          GuntherKroth.com
+          <div @click="open('/')">GuntherKroth.com</div>
         </v-col>
-        <v-col cols="12">
+        <v-col v-for="list in lists" :key="list.title" cols="12">
           <v-card>
-            <v-card-title>My Links</v-card-title>
+            <v-card-title>{{ list.title }}</v-card-title>
             <v-card-text>
               <v-list>
                 <v-list-item
-                  @click="openNewTab('https://www.linkedin.com/in/gkroth/')"
+                  v-for="item in list.items"
+                  :key="item.name"
+                  @click="openNewTab(item.link)"
                 >
-                  LinkedIn
-                </v-list-item>
-                <v-list-item
-                  @click="openNewTab('https://github.com/goosebones')"
-                >
-                  GitHub
+                  {{ item.name }}
                 </v-list-item>
               </v-list>
             </v-card-text>
@@ -38,9 +35,40 @@
 
 <script>
 export default {
+  data() {
+    return {
+      lists: [
+        {
+          title: "My Projects",
+          items: [
+            {
+              name: "LiftingLookup",
+              link: "https://www.liftinglookup.com",
+            },
+          ],
+        },
+        {
+          title: "My Links",
+          items: [
+            {
+              name: "LinkedIn",
+              link: "https://www.linkedin.com/in/gkroth/",
+            },
+            {
+              name: "Gitub",
+              link: "https://github.com/goosebones",
+            },
+          ],
+        },
+      ],
+    };
+  },
   methods: {
     openNewTab(link) {
       window.open(link, "_blank");
+    },
+    open(link) {
+      window.open(link);
     },
   },
 };
