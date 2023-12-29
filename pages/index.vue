@@ -55,7 +55,7 @@ export default {
               link: "https://www.linkedin.com/in/gkroth/",
             },
             {
-              name: "Gitub",
+              name: "GitHub",
               link: "https://github.com/goosebones",
             },
           ],
